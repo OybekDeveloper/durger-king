@@ -37,10 +37,10 @@ const Food = ({setOpenBacket,openBacket}) => {
                     {count!==0 ? (
                         <>
                             <button  onClick={handleDec} className=' flex justify-center , items-center h-8 w-12 bg-red-500 text-zinc-50 px-2 py-1 rounded-md mr-1'>
-                                <p style={{fontSize:'35px'}}>-</p>    
+                                <span style={{fontSize:'35px'}}>-</span>    
                             </button>
                             <button  onClick={handleInc} className=' flex justify-center , items-center h-8 w-12 bg-yellow-400 text-zinc-50 px-2 py-1 rounded-md mr-1'>
-                                <p  style={{fontSize:'35px'}}>+</p>    
+                                <span  style={{fontSize:'35px'}}>+</span>    
                             </button>
                             </>
                     ) : (
