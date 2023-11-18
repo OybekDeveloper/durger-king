@@ -20,9 +20,13 @@ const Foods = () => {
         <Food openBacket={openBacket} setOpenBacket={setOpenBacket} />
         <Food openBacket={openBacket} setOpenBacket={setOpenBacket} />
         <Food openBacket={openBacket} setOpenBacket={setOpenBacket} />
+        <Food openBacket={openBacket} setOpenBacket={setOpenBacket} />
+        <Food openBacket={openBacket} setOpenBacket={setOpenBacket} />
+        <Food openBacket={openBacket} setOpenBacket={setOpenBacket} />
+        <Food openBacket={openBacket} setOpenBacket={setOpenBacket} />
       </div>
       {openBacket ? (
-        <div className='mt-4 flex justify-center fixed bottom-0 w-full z-10'>
+        <div className=' h-16 mt-4 flex justify-center fixed bottom-0 w-full z-10 text-zinc-50'>
           <button
             style={{ width: '100%' }}
             className='bg-green-600 py-2 px-4 '
