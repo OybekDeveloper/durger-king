@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
-const Food = ({setOpenBacket,openBacket}) => {
+const Food = ({ setOpenBacket, openBacket }) => {
     const [count, setCount] = useState(0);
 
     const handleInc = () => {
         setCount(count + 1);
     }
     const handleDec = () => {
-        if(count>0){
+        if (count > 0) {
             setCount(count - 1);
-        }else if(count<=0){
+        } else if (count <= 0) {
             setCount(0);
             setOpenBacket(false);
         }
@@ -34,15 +34,15 @@ const Food = ({setOpenBacket,openBacket}) => {
                     <span className='font-bold'>$4.99</span>
                 </div>
                 <div className='flex justify-center'>
-                    {count!==0 ? (
+                    {count !== 0 ? (
                         <>
-                            <button style={{fontSize:'35px'}}  onClick={handleDec} className=' flex justify-center , items-center h-8 w-12 bg-red-500 text-zinc-50 px-2 py-1 rounded-md mr-1'>
-                                -        
+                            <button onClick={handleDec} className='text-3xl flex justify-center , items-center h-8 w-12 bg-red-500 text-zinc-50 px-2 py-1 rounded-md mr-1'>
+                                -
                             </button>
-                            <button  style={{fontSize:'35px'}} onClick={handleInc} className=' flex justify-center , items-center h-8 w-12 bg-yellow-400 text-zinc-50 px-2 py-1 rounded-md mr-1'>
-                                +   
+                            <button onClick={handleInc} className='text-3xl flex justify-center , items-center h-8 w-12 bg-yellow-400 text-zinc-50 px-2 py-1 rounded-md mr-1'>
+                                +
                             </button>
-                            </>
+                        </>
                     ) : (
                         <button onClick={handleActive} className='w-24 bg-yellow-400  text-white px-2 py-1 rounded-md mr-2 font-bold'> Add</button>
 
