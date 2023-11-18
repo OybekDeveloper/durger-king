@@ -36,11 +36,11 @@ const Food = ({setOpenBacket,openBacket}) => {
                 <div className='flex justify-center'>
                     {count!==0 ? (
                         <>
-                            <button  onClick={handleDec} className=' flex justify-center , items-center h-8 w-12 bg-red-500 text-zinc-50 px-2 py-1 rounded-md mr-1'>
-                                <span style={{fontSize:'35px'}}>-</span>    
+                            <button style={{fontSize:'35px'}}  onClick={handleDec} className=' flex justify-center , items-center h-8 w-12 bg-red-500 text-zinc-50 px-2 py-1 rounded-md mr-1'>
+                                -        
                             </button>
-                            <button  onClick={handleInc} className=' flex justify-center , items-center h-8 w-12 bg-yellow-400 text-zinc-50 px-2 py-1 rounded-md mr-1'>
-                                <span  style={{fontSize:'35px'}}>+</span>    
+                            <button  style={{fontSize:'35px'}} onClick={handleInc} className=' flex justify-center , items-center h-8 w-12 bg-yellow-400 text-zinc-50 px-2 py-1 rounded-md mr-1'>
+                                +   
                             </button>
                             </>
                     ) : (
