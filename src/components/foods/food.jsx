@@ -1,25 +1,31 @@
 import React, { useState } from 'react'
-// import './foods.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem, minusItem, selectCart } from '../../redux/slices/cardSlice';
+
 
 const Food = ({ setOpenBacket, foodsData }) => {
     const [count, setCount] = useState(0);
+    const dispatch = useDispatch();
+    const {items}=useSelector(selectCart)
+
+    const quantity=items.find(c=>c.id===foodsData.id);
+    console.log(quantity)
 
     const handleInc = () => {
         setCount(count + 1);
+        dispatch(addItem(foodsData));
     }
+
     const handleDec = () => {
         if (count > 0) {
             setCount(count - 1);
         } else if (count <= 0) {
             setCount(0);
         }
-        if(count===1)setOpenBacket(false);
+        if (count === 1) setOpenBacket(false);
+       dispatch(minusItem(foodsData.id));
     }
 
-    const handleActive = () => {
-        setCount(1);
-        setOpenBacket(true)
-    }
 
     return (
         <div className='container'>
@@ -27,8 +33,8 @@ const Food = ({ setOpenBacket, foodsData }) => {
                 <div className='flex justify-center'>
                     <div className=' mx-auto flex  relative justify-between'>
                         <img width={'100px'} src={foodsData.img} alt='img' />
-                        {count <= 0 ? null : (
-                            <span style={{ width: '25px', height: '25px' }} className=' flex justify-center items-center absolute text-zinc-50 bg-yellow-400 p-1  rounded-full'>{count}</span>
+                        {quantity?.quantity>0 && (
+                            <span style={{ width: '25px', height: '25px' }} className=' flex justify-center items-center absolute text-zinc-50 bg-yellow-400 p-1  rounded-full'>{quantity.quantity}</span>
                         )}
                     </div>
                 </div>
@@ -37,7 +43,7 @@ const Food = ({ setOpenBacket, foodsData }) => {
                     <span className='font-bold'>${foodsData.price}</span>
                 </div>
                 <div className='flex justify-center'>
-                    {count !== 0 ? (
+                    {quantity?.quantity ? (
                         <>
                             <button
                                 type='button'
@@ -57,7 +63,7 @@ const Food = ({ setOpenBacket, foodsData }) => {
 
                         </>
                     ) : (
-                        <button type='button' onClick={handleActive} className=' cursor-auto  w-24 bg-yellow-400  text-white px-2 py-1 rounded-md mr-2 font-bold transform transition-transform duration-300 group-hover:scale-105'> Add</button>
+                        <button type='button' onClick={handleInc} className=' cursor-auto  w-24 bg-yellow-400  text-white px-2 py-1 rounded-md mr-2 font-bold transform transition-transform duration-300 group-hover:scale-105'> Add</button>
 
                     )}
 

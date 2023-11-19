@@ -4,6 +4,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 4.99,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Burger_148.png",
   },
   {
@@ -11,6 +12,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 1.49,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Fries_148.png",
   },
   {
@@ -18,6 +20,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 3.49,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Hotdog_148.png",
   },
   {
@@ -25,6 +28,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Tako_148.png",
   },
   {
@@ -32,6 +36,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Pizza_148.png",
   },
   {
@@ -39,6 +44,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Donut_148.png?1",
   },
   {
@@ -46,6 +52,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Popcorn_148.png",
   },
   {
@@ -53,6 +60,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Cake_148.png",
   },
   {
@@ -60,6 +68,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Icecream_148.png",
   },
   {
@@ -67,6 +76,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Cookie_148.png",
   },
   {
@@ -74,6 +84,7 @@ const foodsData = [
     name: "Burger",
     desc: "bla bla",
     price: 12,
+    quantity:0,
     img: "https://truegis-webview.firebaseapp.com/img/cafe/Flan_148.png",
   },
   
