@@ -13,9 +13,12 @@ const Order = () => {
         <>
             <div className='container p-5 text-zinc-50 mb-20'>
                 <div className='flex justify-between items-center'>
-                    <h1 className='text-2xl'>YOUR ORDER</h1>
-                    <button onClick={() => navigate('/')} className='text-green-400'>edit</button>
+                    <h1 className='text-2xl text-green-500'>YOUR ORDER</h1>
+                    <button onClick={() => navigate('/')} className='w-24 bg-green-600 text-zinc-100 rounded-md'>
+                        <p className='text-xl text-zinc-50'>Edit</p>
+                    </button>
                 </div>
+                <hr className='mt-3 text-gray-300'/>
                 {items.map(item=>{
                     return item.quantity !== 0 && ( 
                     <OrderItem key={item.id} foodsData={item} totlaPrice={totlaPrice} />
