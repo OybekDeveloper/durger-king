@@ -5,7 +5,7 @@ import Order from './components/basket/order';
 
 function App() {
   return (
-    <div className="container">
+    <div className="flex ">
         <Routes>
             <Route path='/' element={<Foods/>}/>
             <Route path='/backet' element={<Order/>}/>
